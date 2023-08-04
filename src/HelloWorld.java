@@ -6,6 +6,7 @@ public class HelloWorld {
     private JPanel rootPanel;
     private JLabel helloLabel;
     private JButton helloButton;
+    private JTextField nameTextField;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("HelloWorld");
@@ -19,7 +20,8 @@ public class HelloWorld {
         helloButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                helloLabel.setText("Hello World");
+                String greeting = "Hello " + nameTextField.getText();
+                helloLabel.setText(greeting);
             }
         });
     }
